@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+    <h1>We will display trainer names here.</h1>
+
+    <% trainerNames.map(trainer => { %>
+        Trainer id: <%= trainer.id %>
+        Trainer name: <%= trainer.trainer_name %>
+        <br>
+        <br>
+    <% }) %>
+</body>
+</html>

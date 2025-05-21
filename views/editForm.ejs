@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <form action="/editForm" method="post">
+      Here will be the form!
+      <label for="pokemonName">Pokemon Name:</label>
+      <input type="text" name="pokemonName" id="pokemonName" />
+
+      <label for="trainerName">Trainer Name:</label>
+      <input type="text" name="trainerName" id="trainerName" />
+
+      <label for="pokemonType">Pokemon type:</label>
+      <select name="pokemonType" id="pokemonType">
+        <option value="normal">normal</option>
+        <option value="fire">fire</option>
+        <option value="water">water</option>
+        <option value="grass">grass</option>
+        <option value="flying">flying</option>
+        <option value="fighting">fighting</option>
+        <option value="poison">poison</option>
+        <option value="electric">electric</option>
+        <option value="ground">ground</option>
+        <option value="rock">rock</option>
+        <option value="Psychic">Psychic</option>
+        <option value="ice">ice</option>
+        <option value="bug">bug</option>
+        <option value="ghost">ghost</option>
+        <option value="dragon">dragon</option>
+        <option value="dark">dark</option>
+        <option value="steel">steel</option>
+        <option value="fairy">fairy</option>
+      </select>
+
+      <h2>Update Where?</h2>
+      <label for="updateId">Type where to update in db</label>
+      <select name="id" id="pokemon_id">
+        <% getIds.forEach(id => { %>
+          <option value="<%= id.id%>"><%= id.id %></option>
+          <% console.log(id.id) %>
+        <% }) %>
+      </select>
+      <button type="submit">Update</button>
+    </form>
+  </body>
+</html>
+
+</body>
+</html>

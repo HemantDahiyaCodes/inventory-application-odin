@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+    <h1>This is the pokemon page. We will display pokemon names, type and level here.</h1>
+
+    <% pokemonNames.map(pokemon => { %>
+        Pokemon id: <%= pokemon.id %>
+        Pokemon name: <%= pokemon.name %>
+        <br>
+        <br>
+    <% }) %>
+
+    <h2>Edit some data? click the button below</h2>
+    <a href="editForm">Edit data!</a>
+    <a href="deleteDataForm">Delete data!</a>
+</body>
+</html>

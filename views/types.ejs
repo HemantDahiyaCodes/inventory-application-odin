@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+    <h1>We will display pokemon types and their names here.</h1>
+
+
+    <% pokemonTypes.map(pokemon => { %>
+        id: <%= pokemon.id %>
+        type: <%= pokemon.pokemon_type %>
+    <% }) %>
+</body>
+</html>
